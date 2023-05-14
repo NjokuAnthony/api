@@ -12,7 +12,7 @@ const App = () => {
     .catch(error => console.log(error) )
   }, [])
   return (
-    <div>
+    <div className='task'>
       <table border='1'>
         <thead>
           <tr>
@@ -32,7 +32,7 @@ const App = () => {
               <td>{users.username}</td>
               <td>{users.email}</td>
               <td>{users.address.street},  {users.address.suite},  {users.address.city},  {users.address.zipcode}</td>
-              {/* <td>{users.geo[0]}, {users.geo.}</td> */}
+              <td>{users.address.geo.lat}, {users.address.geo.lng}</td>
             </tr>
           ))}
         </tbody>
